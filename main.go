@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/CrosbySayan/gross/internal/db"
 	"github.com/CrosbySayan/gross/internal/server"
 )
 
@@ -17,4 +18,8 @@ func main() {
 	}
 
 	// fmt.Printf("Title: %s\nLink: %s\nDesc: %s\n", channel.Title, channel.Link, channel.Desc)
+	_, err = db.NewDataBaseManager("new_db.sql")
+	if err != nil {
+		panic(err)
+	}
 }
