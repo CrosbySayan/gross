@@ -11,5 +11,5 @@ type SubManager interface {
 	Subscribe(name string, url string) error
 	Unsubscribe(name string) error
 
-	Fetch(name string) (types.RssChannel, []types.RssItem, error)
+	Fetch(name string) (*types.Rss, error)
 }
