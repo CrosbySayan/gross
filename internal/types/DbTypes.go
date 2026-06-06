@@ -5,6 +5,7 @@ import "time"
 type Article struct {
 	ID         int64
 	ExternalID string // GUID
+	ChannelID  int64
 
 	Title       string
 	URL         string
